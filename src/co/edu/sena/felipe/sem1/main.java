@@ -10,7 +10,7 @@ public class main {
         System.out.println("╚════════════════════════════════════════════════╝");
         System.out.println();
 
-        // ========== PARTE 1: CREAR CLIENTES ==========
+        // PARTE 1: CREAR CLIENTES
         System.out.println("═══════════════════════════════════════════════════");
         System.out.println("          PARTE 1: REGISTRO DE CLIENTES");
         System.out.println("═══════════════════════════════════════════════════\n");
@@ -40,7 +40,7 @@ public class main {
 
         System.out.println("✓ 3 clientes registrados exitosamente\n");
 
-        // ========== PARTE 2: EVENTOS SIN CLIENTE (Original) ==========
+        //  PARTE 2: EVENTOS SIN CLIENTE
         System.out.println("═══════════════════════════════════════════════════");
         System.out.println("     PARTE 2: EVENTOS SIN CLIENTE ASIGNADO");
         System.out.println("═══════════════════════════════════════════════════\n");
@@ -58,7 +58,7 @@ public class main {
         System.out.println("EVENTO 3:");
         evento3.showInfo();
 
-        // ========== PARTE 3: EVENTOS CON CLIENTE ASIGNADO ==========
+        //  PARTE 3: EVENTOS CON CLIENTE ASIGNADO
         System.out.println("═══════════════════════════════════════════════════");
         System.out.println("     PARTE 3: EVENTOS CON CLIENTE ASIGNADO");
         System.out.println("═══════════════════════════════════════════════════\n");
@@ -127,7 +127,7 @@ public class main {
         cliente3.mostrarDatos();
         System.out.println();
 
-        // ========== PARTE 5: MÁS EVENTOS (Original) ==========
+        //  PARTE 5: MÁS EVENTOS
         System.out.println("═══════════════════════════════════════════════════");
         System.out.println("          PARTE 5: EVENTOS ADICIONALES");
         System.out.println("═══════════════════════════════════════════════════\n");
@@ -141,7 +141,7 @@ public class main {
         System.out.println("EVENTO 8:");
         evento8.showInfo();
 
-        // ========== RESUMEN FINAL ==========
+        //  RESUMEN FINAL
         System.out.println("╔════════════════════════════════════════════════╗");
         System.out.println("║              RESUMEN EJECUTIVO                 ║");
         System.out.println("╚════════════════════════════════════════════════╝");

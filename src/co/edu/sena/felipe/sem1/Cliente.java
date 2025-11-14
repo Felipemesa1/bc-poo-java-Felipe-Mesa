@@ -1,16 +1,9 @@
 package co.edu.sena.felipe.sem1;
 
-/**
- * Clase Cliente - Sistema Sabores y Eventos
- * Representa a las personas o empresas que contratan servicios de catering
- * Relación: Un Cliente puede contratar múltiples Eventos
- *
- * @author Juan Felipe Mesa
- * @version 1.0
- */
+
 public class Cliente {
 
-    // ATRIBUTOS (Mínimo 4)
+    // ATRIBUTOS
     private String idCliente;
     private String nombreCompleto;
     private String telefono;
@@ -19,7 +12,7 @@ public class Cliente {
     private int eventosContratados;
     private double descuento;        // Descuento por fidelidad (0.0 a 1.0)
 
-    // CONSTRUCTOR
+    // CONSTRUCTORr
     public Cliente(String idCliente, String nombreCompleto, String telefono, String email) {
         this.idCliente = idCliente;
         this.nombreCompleto = nombreCompleto;
@@ -42,7 +35,7 @@ public class Cliente {
         this.descuento = 0.0;
     }
 
-    // MÉTODOS (Mínimo 3)
+    // MÉTODOS
 
     /**
      * Muestra toda la información del cliente
@@ -62,10 +55,7 @@ public class Cliente {
         System.out.println("════════════════════════════════════════════════");
     }
 
-    /**
-     * Registra un nuevo evento contratado por el cliente
-     * Actualiza el descuento por fidelidad según eventos contratados
-     */
+
     public void contratarEvento() {
         eventosContratados++;
         System.out.println("✓ Evento registrado para el cliente: " + nombreCompleto);
@@ -83,27 +73,17 @@ public class Cliente {
         }
     }
 
-    /**
-     * Determina si el cliente es frecuente
-     * @return true si tiene 3 o más eventos contratados
-     */
+
     public boolean esClienteFrecuente() {
         return eventosContratados >= 3;
     }
 
-    /**
-     * Calcula el precio final aplicando el descuento por fidelidad
-     * @param precioBase Precio base del evento
-     * @return Precio final con descuento aplicado
-     */
+
     public double calcularPrecioConDescuento(double precioBase) {
         double precioFinal = precioBase - (precioBase * descuento);
         return precioFinal;
     }
 
-    /**
-     * Muestra el cálculo del descuento
-     */
     public void mostrarCalculoDescuento(double precioBase) {
         System.out.println("\n--- CÁLCULO DE PRECIO ---");
         System.out.println("Precio Base: $" + String.format("%,.0f", precioBase));
@@ -112,18 +92,11 @@ public class Cliente {
         System.out.println("Precio Final: $" + String.format("%,.0f", calcularPrecioConDescuento(precioBase)));
     }
 
-    /**
-     * Valida que el email tenga formato correcto
-     * @return true si el email es válido
-     */
+
     public boolean validarEmail() {
         return email != null && email.contains("@") && email.contains(".");
     }
 
-    /**
-     * Actualiza el tipo de cliente
-     * @param nuevoTipo "Personal" o "Corporativo"
-     */
     public void cambiarTipoCliente(String nuevoTipo) {
         if (nuevoTipo.equals("Personal") || nuevoTipo.equals("Corporativo")) {
             this.tipoCliente = nuevoTipo;

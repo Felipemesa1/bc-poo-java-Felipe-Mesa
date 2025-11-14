@@ -11,7 +11,7 @@ public class CateringEvent {
     private double costoTotal;
     private Cliente cliente;  // RELACIÓN CON CLIENTE
 
-    // Constructor original (mantenemos compatibilidad)
+    // Constructor original
     public CateringEvent(String eventCode, String eventType, int guestCount) {
         this.eventCode = eventCode;
         this.eventType = eventType;
@@ -23,7 +23,7 @@ public class CateringEvent {
         this.cliente = null;
     }
 
-    // Constructor completo (nuevo)
+    // Constructor completo
     public CateringEvent(String eventCode, String eventType, int guestCount,
                          String fecha, String ubicacion, String tipoMenu) {
         this.eventCode = eventCode;

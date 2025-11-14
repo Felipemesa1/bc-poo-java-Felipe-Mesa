@@ -1,14 +1,15 @@
 package co.edu.sena.felipe.sem1;
 
 public class CateringEvent {
-
-    String eventCode;
-    String eventType;
-    int guestCount;
-    String fecha;
-    String ubicacion;
-    String tipoMenu;
-    double costoTotal;
+    // ATRIBUTOS
+    private String eventCode;
+    private String eventType;
+    private int guestCount;
+    private String fecha;
+    private String ubicacion;
+    private String tipoMenu;
+    private double costoTotal;
+    private Cliente cliente;  // RELACIÓN CON CLIENTE
 
     // Constructor original (mantenemos compatibilidad)
     public CateringEvent(String eventCode, String eventType, int guestCount) {
@@ -19,6 +20,7 @@ public class CateringEvent {
         this.ubicacion = "Por definir";
         this.tipoMenu = asignarMenuPorDefecto(eventType);
         this.costoTotal = calcularCosto();
+        this.cliente = null;
     }
 
     // Constructor completo (nuevo)
@@ -31,6 +33,20 @@ public class CateringEvent {
         this.ubicacion = ubicacion;
         this.tipoMenu = tipoMenu;
         this.costoTotal = calcularCosto();
+        this.cliente = null;
+    }
+
+    // Constructor con cliente
+    public CateringEvent(String eventCode, String eventType, int guestCount,
+                         String fecha, String ubicacion, String tipoMenu, Cliente cliente) {
+        this.eventCode = eventCode;
+        this.eventType = eventType;
+        this.guestCount = guestCount;
+        this.fecha = fecha;
+        this.ubicacion = ubicacion;
+        this.tipoMenu = tipoMenu;
+        this.cliente = cliente;
+        this.costoTotal = calcularCostoConDescuento();
     }
 
     // Asignar menú por defecto según tipo de evento
@@ -66,6 +82,15 @@ public class CateringEvent {
         return guestCount * costoPorPersona;
     }
 
+    // Calcular costo con descuento del cliente
+    private double calcularCostoConDescuento() {
+        double costoBase = calcularCosto();
+        if (cliente != null) {
+            return cliente.calcularPrecioConDescuento(costoBase);
+        }
+        return costoBase;
+    }
+
     // Método original mejorado
     public void showInfo() {
         System.out.println("╔════════════════════════════════════════════════╗");
@@ -77,7 +102,18 @@ public class CateringEvent {
         System.out.println("Fecha: " + this.fecha);
         System.out.println("Ubicación: " + this.ubicacion);
         System.out.println("Tipo de Menú: " + this.tipoMenu);
-        System.out.println("Costo Total: $" + String.format("%,.0f", this.costoTotal));
+
+        // Mostrar información del cliente si existe
+        if (cliente != null) {
+            System.out.println("\n--- CLIENTE ---");
+            System.out.println("Nombre: " + cliente.getNombreCompleto());
+            System.out.println("Teléfono: " + cliente.getTelefono());
+            System.out.println("Tipo: " + cliente.getTipoCliente());
+            System.out.println("Eventos Previos: " + cliente.getEventosContratados());
+            System.out.println("Descuento: " + (cliente.getDescuento() * 100) + "%");
+        }
+
+        System.out.println("\nCosto Total: $" + String.format("%,.0f", this.costoTotal));
         mostrarMenu();
         asignarPersonal();
         System.out.println("════════════════════════════════════════════════\n");
@@ -120,6 +156,12 @@ public class CateringEvent {
         System.out.println("• Chefs: " + chefs);
     }
 
+    // Asignar cliente al evento
+    public void asignarCliente(Cliente cliente) {
+        this.cliente = cliente;
+        this.costoTotal = calcularCostoConDescuento();
+    }
+
     // Getters
     public String getEventCode() { return eventCode; }
     public String getEventType() { return eventType; }
@@ -128,4 +170,13 @@ public class CateringEvent {
     public String getUbicacion() { return ubicacion; }
     public String getTipoMenu() { return tipoMenu; }
     public double getCostoTotal() { return costoTotal; }
+    public Cliente getCliente() { return cliente; }
+
+    // Setters
+    public void setFecha(String fecha) { this.fecha = fecha; }
+    public void setUbicacion(String ubicacion) { this.ubicacion = ubicacion; }
+    public void setTipoMenu(String tipoMenu) {
+        this.tipoMenu = tipoMenu;
+        this.costoTotal = calcularCostoConDescuento();
+    }
 }

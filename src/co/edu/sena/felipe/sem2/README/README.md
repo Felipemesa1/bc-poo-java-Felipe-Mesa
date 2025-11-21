@@ -2,6 +2,7 @@
 
 **Estudiante:** Felipe  
 **Ficha:** [3228973]
+
 **Dominio:** Sistema de Gestión de Eventos y Catering  
 **Fecha:** Noviembre 2024
 

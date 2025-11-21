@@ -9,7 +9,7 @@ public class CateringEvent {
     private String ubicacion;
     private String tipoMenu;
     private double costoTotal;
-    private Cliente cliente;  // RELACIÓN CON CLIENTE
+    private Cliente cliente;
 
     // Constructor original
     public CateringEvent(String eventCode, String eventType, int guestCount) {

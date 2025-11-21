@@ -2,7 +2,6 @@ package co.edu.sena.felipe.sem2;
 
 public class Cliente {
 
-    // ATRIBUTOS
     private String idCliente;
     private String nombreCompleto;
     private String telefono;

@@ -2,7 +2,7 @@ package co.edu.sena.felipe.sem2;
 import java.util.ArrayList;
 
 public class GestoraEventos {
-
+// atribu
     private String nombreEmpresa;
     private ArrayList<PaqueteEvento> paquetes;
     private ArrayList<Cliente> clientes;

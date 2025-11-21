@@ -2,7 +2,7 @@ package co.edu.sena.felipe.sem2;
 
 public class Main {
     public static void main(String[] args) {
-
+// System
         System.out.println("\n╔════════════════════════════════════════════════╗");
         System.out.println("║  SABORES Y EVENTOS - Sistema Gestión Completo ║");
         System.out.println("║          Semana 02 - POO Avanzado             ║");

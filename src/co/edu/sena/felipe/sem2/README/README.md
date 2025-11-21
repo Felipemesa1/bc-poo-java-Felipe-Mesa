@@ -166,4 +166,3 @@ PARTE 6: Operaciones con ArrayList
          - Eliminar servicios de paquetes
 PARTE 7: Sistema de Fidelización (contratar múltiples eventos)
 PARTE 8: Información de Clientes
-PARTE 9: Reporte Ejecutivo

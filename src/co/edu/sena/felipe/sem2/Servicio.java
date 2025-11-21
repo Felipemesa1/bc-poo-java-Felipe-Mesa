@@ -5,7 +5,6 @@ package co.edu.sena.felipe.sem2;
  * Ejemplos: fotografía, música en vivo, decoración, bartender, etc.
  */
 public class Servicio {
-    // ATRIBUTOS
     private String idServicio;
     private String nombreServicio;
     private String categoria;  // "Entretenimiento", "Decoración", "Técnico", "Personal"

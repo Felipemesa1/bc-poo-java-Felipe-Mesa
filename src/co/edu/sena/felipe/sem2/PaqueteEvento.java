@@ -8,7 +8,6 @@ import java.util.ArrayList;
  * RELACIÓN: Tiene un CateringEvent y múltiples Servicios
  */
 public class PaqueteEvento {
-    // ATRIBUTOS
     private String idPaquete;
     private CateringEvent evento;              // RELACIÓN: Un paquete tiene UN evento
     private ArrayList<Servicio> servicios;     // RELACIÓN: Un paquete tiene MÚLTIPLES servicios

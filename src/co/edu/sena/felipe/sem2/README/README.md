@@ -1,7 +1,7 @@
 # 📚 Semana 02 - Clases y Objetos Avanzados
 
 **Estudiante:** Felipe  
-**Ficha:** 3228973
+**Ficha:** [3228973]
 **Dominio:** Sistema de Gestión de Eventos y Catering  
 **Fecha:** Noviembre 2024
 

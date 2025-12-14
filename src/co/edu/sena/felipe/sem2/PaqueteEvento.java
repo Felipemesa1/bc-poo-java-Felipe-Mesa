@@ -2,11 +2,6 @@ package co.edu.sena.felipe.sem2;
 
 import java.util.ArrayList;
 
-/**
- * Clase que representa un paquete de evento completo
- * Incluye el evento base más servicios adicionales contratados
- * RELACIÓN: Tiene un CateringEvent y múltiples Servicios
- */
 public class PaqueteEvento {
     private String idPaquete;
     private CateringEvent evento;              // RELACIÓN: Un paquete tiene UN evento

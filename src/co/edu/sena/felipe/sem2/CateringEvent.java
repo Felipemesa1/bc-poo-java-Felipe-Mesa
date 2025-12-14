@@ -1,7 +1,7 @@
 package co.edu.sena.felipe.sem2;
 
 public class CateringEvent {
-    // ATRIBUTOS
+    // ATRIBUTO
     private String eventCode;
     private String eventType;
     private int guestCount;

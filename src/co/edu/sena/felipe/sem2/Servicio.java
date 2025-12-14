@@ -1,9 +1,6 @@
 package co.edu.sena.felipe.sem2;
 
-/**
- * Clase que representa un servicio adicional que se puede contratar para un evento
- * Ejemplos: fotografía, música en vivo, decoración, bartender, etc.
- */
+
 public class Servicio {
     private String idServicio;
     private String nombreServicio;

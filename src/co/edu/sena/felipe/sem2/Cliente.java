@@ -1,7 +1,7 @@
 package co.edu.sena.felipe.sem2;
 
 public class Cliente {
-
+// Privates
     private String idCliente;
     private String nombreCompleto;
     private String telefono;

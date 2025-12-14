@@ -1,7 +1,8 @@
 # 📚 Semana 02 - Clases y Objetos Avanzados
 
 **Estudiante:** Felipe  
-**Ficha:** [3228973]  
+**Ficha:** [3228973]
+
 **Dominio:** Sistema de Gestión de Eventos y Catering  
 **Fecha:** Noviembre 2024
 
@@ -166,4 +167,3 @@ PARTE 6: Operaciones con ArrayList
          - Eliminar servicios de paquetes
 PARTE 7: Sistema de Fidelización (contratar múltiples eventos)
 PARTE 8: Información de Clientes
-Parte 9
